@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<db>
+		<host>localhost</host>
+		<dbname>fw</dbname>
+		<dbuser_name>root</dbuser_name>
+		<password></password>
+		<!--<dbEngine>Mysql</dbEngine>-->
+		<dbEngine>MyMysqli</dbEngine>
+		<!-- <dbEngine>Oracle</dbEngine> -->
+	</db>
+	<inlcudes>
+		<include>utils/Logger.php</include>
+		<include>utils/FWDate.php</include>
+		<include>utils/Config.php</include>
+		<include>utils/Utils.php</include>
+		<include>model/db.php</include>
+		<include>model/Action.php</include>
+		<include>model/ServiceProvider.php</include>
+		<include>utils/Lang.php</include>
+		<include>utils/FWGenerator.php</include>
+		<include>utils/MainInjector.php</include>
+		<include>utils/templates.php</include>
+		<include>utils/template.php</include>
+		<include>utils/session.php</include>
+		<include>control/executer.php</include>
+		<include>control/DataHandler.php</include>
+		<include>control/Content.php</include>
+		<include>utils/AH.php</include>
+		<include>utils/defaults.php</include>
+		<include>utils/Modules.php</include>
+		<include>control/CustomDataHandlers.php</include>
+		<!-- include your controllers here -->
+		
+	</inlcudes>
+	<lang_script>view/js</lang_script>
+	<services>
+		<service name="db" class="ServiceProvider" 	method="__f"></service>
+		<service name="RequestFinilizer" class="ServiceProvider" method="___f"></service>
+	</services>
+	<generators>
+		<generator value="grid"		class="Grid"/>
+		<generator value="text"		class="Text"/>
+		<generator value="select"	class="Select"/>
+		<generator value="date"		class="Date"/>
+		<generator value="button"	class="Button"/>
+		<generator value="link"		class="Link"/>
+		<generator value="lov" 		class="Lov"/>
+		<generator value="form" 	class="Form"/>
+	</generators>
+	<injectors>
+		<injector name="lang" 		/>
+		<injector name="template" 	/>
+		<injector name="session" 	/>
+		<injector name="pageScope"	/>
+		<injector name="Content"	/>
+		<injector name="defaults"	/>
+		<injector name="request"	/>
+		<injector name="domain"		/>
+	</injectors>
+	<default_time_zone>Asia/Damascus</default_time_zone>
+	<mobile_support>false</mobile_support>
+	<send_receive_mode>submit</send_receive_mode>
+	<parameters_seperator>_</parameters_seperator>
+	<parameter_seperator>-</parameter_seperator>
+	<!-- <template_mode>XML</template_mode> -->
+	<template_mode>array</template_mode>
+	<attachment_config>
+		<temp_dir>/__temp__attach_dir</temp_dir>
+		<permenant_dir>../files/</permenant_dir>
+		<allowed_extensions>image/jpg,image/jpeg,image/gif,image/png,text/plain,application/pdf,application/octet-stream,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document</allowed_extensions>
+		<max_size_in_kelo>25000</max_size_in_kelo>
+		<fn>AN</fn>
+		<ah>AH</ah>
+	</attachment_config>
+</root>

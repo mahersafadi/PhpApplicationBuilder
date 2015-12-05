@@ -1,0 +1,102 @@
+@CHARSET "ISO-8859-1";
+
+.form_header{
+	text-align:center;
+	background-color: #ccc;
+	height: 12px;
+	width: 100%;
+}
+.form_header tr td{
+	width:100%;
+	text-align: center;
+}	
+.form_content{
+	
+}
+.form_footer{
+	background-color: #ccc;
+	height: 12px;
+	width: 100%;
+}
+.form_ok{
+	background:#9B9575;
+	color:#FFF;
+	font-size: 9pt;
+	font-weight:bold;
+	cursor: pointer;
+}
+.form_ok :HOVER{
+	background:#9B9575;
+	color:#FFF;
+	font-size: 9pt;
+	font-weight:bold;
+	cursor: pointer;
+}
+.form_cancel{
+	background:#9B9575;
+	color:#FFF;
+	font-size: 9pt;
+	font-weight:bold;
+	cursor: pointer;
+}
+.form_cancel :HOVER {
+	background:#9B9575;
+	color:#FFF;
+	font-size: 9pt;
+	font-weight:bold;
+	cursor: pointer;
+}
+.seperator{
+	height: 1px !important;
+	background-color: #ccc;
+}
+.grid_title{
+	width:100%;
+	text-align: center;
+	font-size: 14pt;
+	font-weight: bold;
+	background-color: ccc;
+	color: #fff;
+}
+.grid_footer{
+	width:100%;
+	height:5pt;
+	font-size: 1pt;
+	background-color: ccc;
+}
+.grid_buttons{
+	
+}
+.gridbtn{
+	background:#9B9575;
+	color:#FFF;
+	font-size: 9pt;
+	font-weight:bold;
+	cursor: pointer;
+}
+
+.grid_result{
+	padding-top:10pt;
+	padding-bottom:10pt;
+	width: 100%;
+}
+.ctable{
+	width:100%;
+	font-size: 11pt;
+	border-spacing:0;
+    border-collapse:collapse;
+}
+.ctable thead tr th{
+	background-color: #9B9575;
+	text-align: center;
+	border: 1px solid;
+}
+
+.ctable tbody tr td{
+	font-size: 10pt;
+	text-align: center;	
+	border: 1px solid;
+}
+.grid_row_selector{
+	background:#ddd;
+}

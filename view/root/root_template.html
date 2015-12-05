@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+.header{
+	width: 100%;
+	height: 60px;
+	background-color: #ccc;
+}
+.menu{
+	width: 20%;
+	background-color: #ddd;
+	height: 500px;
+}
+</style>
+</head>
+<body>
+	<!-- headr Part -->
+	<div class='header'>
+		<div>#{lang.welcome} #{session.user_name}</div>
+		<div>#{lang.login_time} #{session.login_time}</div>
+	</div>
+	<div style="width: 100%">
+		<table width="100%">
+			<tr>
+				<td class='menu' valign="top">
+					<div><a href="../view/uishell.php?p-ac" >#{lang.content}</a></div>
+					<div><a href="../view/uishell.php?p-l" >#{lang.manag_language}</a></div>
+					<div><a href="../view/uishell.php?p-m" >#{lang.modules}</a></div>
+				</td>
+				<td valign="top" >#content#</td>
+			</tr>
+		</table>
+	</div>
+	<!-- footer Part -->
+</body>
+</html>

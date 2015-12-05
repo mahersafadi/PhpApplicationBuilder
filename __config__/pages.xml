@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<pages>
+		<page name='admin' 	security='false' template='../view/admin/admin_template.html'	title='admin' image=''>../view/admin.html</page>
+		<page name='ac'  	security='false' template='../view/admin/admin_template.html' 	title='content' image=''>../view/admin/content.html</page>
+		
+		<page name='l'		security='false' template='../view/root/root_template.html' 	title='lang' image=''>../view/root/lang.html</page>
+		<page name='mt'		security='false' template='../view/root/root_template.html' 	title='lang' image=''>../view/root/module_types.html</page>
+		<page name='m'		security='false' template='../view/root/root_template.html'		title='modules' image=''>../view/root/modules.html</page>
+	</pages>
+</root>

@@ -1,0 +1,161 @@
+<!-- Auther: Maher Safadi -->
+<script>
+	var f = ['module_id', 'title', 'region', 'module_types', 'category'];
+	var _details = {'menu_details':			['menu_detail_width',	'menu_detail_height',	'menu_detail_direction',	'menu_detail_menu'],
+				   'basic_banner_details':	['basic_banner_width', 	'basic_banner_height',	'basic_banner_color',		'basic_banner_image_src'],
+				   'news_details':			['news_details_width', 	'news_details_height',	'news_details_color', 		'news_details_speed']
+				   };
+	var details = ['menu','basic_banner', 'news'];
+	
+	setModuleDetails = function() {
+		try{
+			for(var i=0; i<details.length; i++){
+				var t = details[i]+'_details';
+				t = document.getElementById(t);
+				t.style.display = 'none';
+			}
+			var x = $('#module_types').val()+'_details';
+			x = document.getElementById(x);
+			x.style.display = '';
+			
+		}
+		catch(e){
+			alertt(e.mesage);
+		}
+	};
+	okClicked = function(){
+		try{
+			var j1 = "";
+			for(var i=0; i<f.length; i++)
+				j1 += ""+ f[i]+":\""+$('#'+f[i]).val()+"\",";
+			if(j1.endsWith(","))
+				j1 = j1.substring(0, j1.length-1);
+			
+			type = $('#module_types').val()+'_details';
+			type = _details[type];
+			var j = "";
+			for(var i=0; i<type.length; i++)
+				j += ""+type[i]+":\""+$('#'+type[i]).val()+"\",";
+			j = j.endsWith(",")?(j.substring(0, j.length-1)):j;
+			j1 += ",__sub__:{"+j+"}";
+			core.senddata({"type":"data", "callback":"form.okcancelAfter", "d":"({"+j1+"})", "op":"save", "tn":"modules_form"});
+		}
+		catch(e){
+			alertt(e.message);
+		}
+		
+	};
+	cancelClicked = function(){
+		//alert('cancelClicked');
+		//Go Back to grid, and make search.
+		
+	}
+</script>
+<div id='moduleForm' style="width: 100%; height: 400px;" {template_name} >
+	<div>
+		<table class="module_content">
+			<tr>
+				<td colspan="2"><input type='hidden' id="module_id" /></td>
+			</tr>
+			<tr>
+				<td align="#{lang.antiAlign}">#{lang.title}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td align="#{lang.align}"><input type="text" id="title" /></td>
+			</tr>
+			<tr>
+				<td align="#{lang.antiAlign}">#{lang.region}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td align="#{lang.align}"><select id="region"> #{domain.regions}</select></td>
+			</tr>
+			<tr>
+				<td align="#{lang.antiAlign}">#{lang.type}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td align="#{lang.align}"><select id="module_types" onchange="setModuleDetails()">#{domain.modules_types}</select></td>
+			</tr>
+			<tr>
+				<td align="#{lang.antiAlign}">#{lang.category}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td align="#{lang.align}"><select id="category"> #{domain.category}</select></td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td colspan="2" id="module_details">
+					<div id="menu_details" style='display:none;'>
+						<table>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.width}</td>
+								<td ><input id="menu_detail_width" /></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.height}</td>
+								<td><input id="menu_detail_height" /></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.direction}</td>
+								<td><select id="menu_detail_direction">#{Domain.menu_direction}</select></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.menu}</td>
+								<td><select id="menu_detail_menu"> #{Domain.menus}
+								</select></td>
+							</tr>
+						</table>
+					</div>
+
+					<div id="basic_banner_details"  style='display:none;'>
+						<table>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.width}</td>
+								<td><input type="text" id="basic_banner_width" /></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.height}</td>
+								<td><input id="basic_banner_height" /></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.header_color}</td>
+								<td><input id="basic_banner_color" /></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.image_src}</td>
+								<td><select id="basic_banner_image_src">
+										#{Domain.content_image_src}
+								</select></td>
+							</tr>
+						</table>
+					</div>
+
+					<div id="news_details"  style='display:none;'>
+						<table>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.width}</td>
+								<td><input type="text" id="news_details_width" /></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.height}</td>
+								<td><input id="news_details_height" /></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.header_color}</td>
+								<td><input id="news_details_color" /></td>
+							</tr>
+							<tr>
+								<td align="#{lang.antiAlign}">#{lang.speed}</td>
+								<td><select id="news_details_speed">
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="40">40</option>
+										<option value="60">60</option>
+								</select></td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table><tr><td><input type="button" value="#{lang.ok}" class="form_ok" onclick="okClicked()" /> </td><td><input type="button" value="#{lang.cancel}" class="form_cancel" onclick="cancelClicked()" /> </td></tr></table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

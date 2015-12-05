@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<domains>
+		<!-- ENTER YOUR CUSTOME DOMAINS -->
+		
+		<!-- END OF CUSTOME DOMAINS -->
+		
+		<!-- 						BASIC DOMAINS						 -->
+		<domain name="lang" 	type="dynamic" table="lang" id="code" label="lang_name"></domain>
+		<domain name="category" type="dynamic" table="category" id="cat_id" label="cat_name" />
+		<domain name="status"	type="static"  >
+			<option value="1" label="active" 	/>
+			<option value="2" label="inactive"	/>
+		</domain>
+		<domain name="content" type="dynamic" table="content" id="content_id" label="title"></domain>
+		<domain name="content_form_types" type="static">
+			<option value="1" label="comment"></option>
+			<option value="2" label="subscribe"></option>
+			<option value="3" label="request"></option>
+			<option value="4" label="application"></option>
+		</domain>
+		<domain name="yes_no" type="static">
+			<option value="1" label="yes"></option>
+			<option value="0" label="no"></option>
+		</domain>
+		<domain name="types" type="static">
+			<option value="1" label="text"></option>
+			<option value="2" label="date"></option>
+			<option value="3" label="select"></option>
+			<option value="4" label="checkbox"></option>
+			<option value="4" label="color"></option>s
+		</domain>
+		<domain name="forms" type="dynamic" table="content_form" id="cf_id" label="cf_title" ></domain>
+		<domain name="domains" type="static">
+			<option value="lang" label="lang"></option>
+			<option value="category" label="category"></option>
+			<option value="status" label="status"></option>
+			<option value="content" label="content"></option>
+			<option value="content_form_types" label="content_form_types"></option>
+			<option value="yes_no" label="yes_no"></option>
+			<option value="types" label="types"></option>
+			<option value="forms" label="forms"></option>
+			<option value="module_type_FT" label="module_type_FT"></option>
+			<option value="module_types" label="module_types"></option>
+			<option value="regions" label="regions"></option>
+			
+		</domain>
+		<domain name="module_types" type="dynamic" table="module_types" id="mt_id" label="mt_name"></domain>
+		<domain name="regions" type="static">
+			<option value="r1"  label="r1"></option>
+			<option value="r11" label="r11"></option>
+			<option value="r12" label="r12"></option>
+			<option value="r13" label="r13"></option>
+			
+			<option value="r2"  label="r2"></option>
+			<option value="r21" label="r21"></option>
+			<option value="r22" label="r22"></option>
+			<option value="r23" label="r23"></option>
+			
+			<option value="r3"  label="r3"></option>
+			<option value="r31" label="r31"></option>
+			<option value="r32" label="r32"></option>
+			<option value="r33" label="r33"></option>
+			
+			<option value="r4"  label="r4"></option>
+			<option value="r41" label="r41"></option>
+			<option value="r42" label="r42"></option>
+			<option value="r43" label="r43"></option>
+			
+			<option value="r5"  label="r5"></option>
+			<option value="r51" label="r51"></option>
+			<option value="r52" label="r52"></option>
+			<option value="r53" label="r53"></option>
+		</domain>
+		<domain name="menu_direction" type="static">
+			<option value="horizontal" 	label="horizontal"></option>
+			<option value="vertical" 	label="vertical"></option>
+		</domain>
+		<domain name="flow_type" type="styatic">
+			<option value="slow" label="slow" />
+			<option value="normal" label="normal" />
+			<option value="fast" label="fast" />
+		</domain>
+		<domain name="content_image_src" 	type="static">
+			<option value="first_content" 	label="first_content" />
+			<option value="first_content" 	label="first_content" />
+			<option value="external_image" 	label="external_image" />
+			<option value="none" label="none" />
+		</domain>
+		<domain name="modules_types" type="static">
+			<option value="menu" 			label="menu"></option>
+			<option value="basic_banner" 	label="basic_banner"></option>
+			<option value="news" 			label="news"></option>
+			<option value="slide_show" 		label="slide_show"></option>
+			<option value="survey" 			label="survey"></option>
+		</domain>
+	</domains>
+</root>
