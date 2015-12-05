@@ -1,4 +1,6 @@
-<?php	
+<?php
+          //Maher Alsafadi
+          //maher.safadi@gmail.com	
 	class AH{
 		private $fileOptions = null;
 		private $errors;

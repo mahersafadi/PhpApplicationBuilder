@@ -1,6 +1,6 @@
 <?php
 /*
- * Auther: Maher Safadi
+ * Auther: Maher Safadi, maher.safadi@gmail.com
 * March - 2014
 * */
 class FWDate{

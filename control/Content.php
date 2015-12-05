@@ -1,4 +1,8 @@
 <?php
+/*
+ * Auther: Maher Safadi, maher.safadi@gmail.com
+* March - 2014
+* */
 class Content{
 	private $detail;
 	private $form;

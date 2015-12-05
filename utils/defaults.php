@@ -1,4 +1,8 @@
 <?php
+/*
+ * Auther: Maher Safadi, maher.safadi@gmail.com
+* March - 2014
+* */
 	class defaults{
 		public function processEL($exp){
 			try{

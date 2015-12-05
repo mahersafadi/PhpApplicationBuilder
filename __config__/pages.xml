@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Auther: Maher Safadi, maher.safadi@gmail.com-->
 <root>
 	<pages>
 		<page name='admin' 	security='false' template='../view/admin/admin_template.html'	title='admin' image=''>../view/admin.html</page>
